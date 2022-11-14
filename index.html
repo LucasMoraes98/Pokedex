@@ -21,27 +21,19 @@
 </head>
 
 <body>
-
-        <section class="content">
-            <h1>Pokedex</h1>
+    <section class="content">
+            <h1><img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png" alt=""></h1>
 
             <ol id="pokemonList"class="pokemons">
-                <li class="pokemon">
-                    <span class="number">#006</span>
-                    <span class="name">Charizard</span>
-                    
-                    <div class="detail">
-                        <ol class="types">
-                            <li class="type">fire</li>
-                            <li class="type">flying</li>
-                        </ol>
 
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg" alt="Charizard">
-                    </div>
-                </li>
-                
             </ol>
-        </section>
+        
+        <div class="pagination">
+            <button id="loadMoreButton" type="button">
+                Load more
+            </button>
+        </div>
+    </section>
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
