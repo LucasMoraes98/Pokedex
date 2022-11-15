@@ -3,6 +3,14 @@
     box-sizing: border-box;
 }
 
+img {
+    border-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
+}
+
 body {
     background-color: #fd4f4f;
 }
