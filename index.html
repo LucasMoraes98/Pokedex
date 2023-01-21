@@ -17,17 +17,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
     
     <!-- Nosso CSS -->
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/global--header.css">
+    <link rel="stylesheet" href="./assets/css/global--discovery.css">
+    <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/popup--pokemon.css">
+    <link rel="stylesheet" href="./assets/css/global--header-responsive.css">
+    <link rel="stylesheet" href="./assets/css/popup--pokemon-responsive.css">
+    <link rel="stylesheet" href="./assets/css/global--footer-responsive.css">
 </head>
 
 <body>
     <section class="content">
         <h1><a href="https://pokedex-mocha-eight.vercel.app/"><img src="/assets/img/Pokédex_logo.png" class="media-object  img-responsive img-thumbnail"></a></h1>
 
-            <ol id="pokemonList"class="pokemons">
-            </ol>
+        <div id="modoEscuroClaro">
+            <button id="header__EscuroClaro__icon" onclick="alterarModoEscuroClaro()">
+                <i class="uil uil-brightness-half"></i>
+            </button>
+        </div>
+    </header>
+    
+    <nav class="discovery">
 
+        <div class="discovery__container" id="discovery__option">
+            
+            <button id="discovery__option__icon">
+                <i class="uil uil-bars"></i>
+            </button>
+           
+        </div>
+
+        <div class="discovery__container oculto animate__animated" id="discovery__plus">
+            
+            <div class="discovery__plus__container" id="discovery__plus__search">
+                <h3>Search by name or number</h3>
+                <form id="discovery__plus__search__form" action="">
+                    <input class="todos-inputs" id="discovery__plus__search__form__input" type="text" name="" >
+                    <button id="discovery__plus__search__form__icon" type="submit"><i class="uil uil-search"></i></button>
+                </form>
+                <div class="ocultaSPN animat animate__animated" id="msgErroSearch">
+                    
+                </div>
+            </div>
+            
+            <div class="discovery__plus__container" id="discovery__plus__types">
+                <h3>Filter by type</h3>
+                <button class="type-button normal" id="normal">normal</button>
+                <button class="type-button fighting" id="fighting">fighting</button>
+                <button class="type-button flying" id="flying">flying</button>
+                <button class="type-button poison" id="poison">poison</button>
+                <button class="type-button ground" id="ground">ground</button>
+                <button class="type-button rock" id="rock">rock</button>
+                <button class="type-button bug" id="bug">bug</button>
+                <button class="type-button ghost" id="ghost">ghost</button>
+                <button class="type-button steel" id="steel">steel</button>
+                <button class="type-button fire" id="fire">fire</button>
+                <button class="type-button water" id="water">water</button>
+                <button class="type-button grass" id="grass">grass</button>
+                <button class="type-button electric" id="electric">electric</button>
+                <button class="type-button psychic" id="psychic">psychic</button>
+                <button class="type-button ice" id="ice">ice</button>
+                <button class="type-button dragon" id="dragon">dragon</button>
+                <button class="type-button dark" id="dark">dark</button>
+                <button class="type-button fairy" id="fairy">fairy</button>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="content lightdark bglight">
+
+
+        <ol id="listaPokemon" class="pokemons">
+            <!-- LIST HERE -->
+        </ol>
+
+        <div id="div-popup" class="exibePUP">
+            <!-- POPUP HERE -->
+        </div>
         <div class="pagination">
             <button id="loadMoreButton" type="button">
                 Carregar mais
@@ -36,8 +104,13 @@
     </section>
 
     <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js" type="text/javascript"></script>
-    <script src="/assets/js/poke-api.js" type="text/javascript"></script>
-    <script src="/assets/js/main.js" type="text/javascript"></script>
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/discovery.js"></script>
+    <script src="./assets/js/discovery-search.js"></script>
+    <script src="./assets/js/discovery-types.js"></script>
+    <script src="./assets/js/pokemon-card.js"></script>
+    <script src="./assets/js/content-HTML.js"></script>
 </body>
 </html>

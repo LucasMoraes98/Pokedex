@@ -1,50 +1,62 @@
-const pokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
+const backgroundAreas = document.querySelectorAll('.lightdark')
+let ativadoDark = false
 
-const maxRecords = 649
-const limit = 600
-let offset = 0;
+const listaPokemon = document.getElementById('listaPokemon')
+const bttMore = document.getElementById('bttMore')
+const divPaginacaoMore = document.getElementById('paginacaoMore')
+const bttAll = document.getElementById('bttAll')
 
+const maxRecords = 649;
+let offset = 649;
+let limit = 10;
 
+function alterarModoEscuroClaro() {
 
-function convertPokemonToLi(pokemon) {
-    return `
-        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
-
-            <div class="detail">
-                <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                </ol>
-
-                <img src="${pokemon.photo}" 
-                    alt="${pokemon.name}">
-            </div>
-        </li>
-    `
+    if (!ativadoDark) {
+        backgroundAreas.forEach( (area)=> {
+            area.classList.replace("bglight", "bgdark");  
+        })  
+        ativadoDark = true    
+    } else if (ativadoDark) {
+        backgroundAreas.forEach( (area)=> {
+            area.classList.replace("bgdark", "bglight");
+        })
+        ativadoDark = false
+    }
 }
 
-function loadPokemonItens(offset, limit) {
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
+function hideLoadMore() {
+    divPaginacaoMore.removeChild(bttMore)
+}
+
+function showLoadMore() {
+    divPaginacaoMore.appendChild(bttMore)
+}
+
+function loadMorePokemons(offset, limit) {
+    pokeApi.getPokemons(offset, limit).then((allPokemons = []) => {
+        const newHtml = allPokemons.map(convertPokemonToLi).join('')
+        listaPokemon.innerHTML += newHtml
     })
 }
 
-loadPokemonItens(offset, limit)
+loadMorePokemons(offset, limit)
 
-loadMoreButton.addEventListener('click', () => {
+bttMore.addEventListener('click', ()=> {
     offset += limit
-
     const qtdRecordNextPage = offset + limit
 
     if (qtdRecordNextPage >= maxRecords) {
-        const newLimit = maxRecords - offset
-        loadPokemonItens(offset, newLimit)
-
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
+        const newLimit = maxRecords - offset;
+        loadMorePokemons(offset, newLimit);
+        hideLoadMore();
     } else {
-        loadPokemonItens(offset, limit)
+        loadMorePokemons(offset, limit)
     }
+})
+
+bttAll.addEventListener('click', ()=> {
+    listaPokemon.innerHTML = ''
+    loadMorePokemons(0, 30)
+    showLoadMore()
 })
