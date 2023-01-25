@@ -1,7 +1,7 @@
 const backgroundAreas = document.querySelectorAll('.lightdark')
 let ativadoDark = false
 
-const pokemonList = document.getElementById('pokemonList')
+const listaPokemon = document.getElementById('listaPokemon')
 
 const maxRecords = 649;
 const limit = 649;

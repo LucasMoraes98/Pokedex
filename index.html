@@ -11,6 +11,9 @@
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,9 +32,6 @@
     <header>
     <section class="content">
         <h1 class="cabecalho__titulo"><a href="index.html"><img class="cabecalho__titulo__logo" src="/assets/img/Pokédex_logo.png" alt="Pokédex"></a></h1>
-
-            <ol id="pokemonList"class="pokemons">
-            </ol>
 
             <div id="modoEscuroClaro">
                 <button id="header__EscuroClaro__icon" onclick="alterarModoEscuroClaro()">
@@ -89,6 +89,10 @@
     </nav>
 
     <section class="content lightdark bglight">
+
+    <ol id="listaPokemon" class="pokemons">
+        <!-- LIST HERE -->
+    </ol>
 
     <div id="div-popup" class="exibePUP">
             <!-- POPUP HERE -->
