@@ -12,8 +12,18 @@ img {
 }
 
 body {
-    background: rgb(255,92,92);
-    background: linear-gradient(180deg, rgba(255,92,92,1) 0%, rgba(255,206,107,1) 50%, rgba(255,253,120,1) 100%);
+    max-width: 100vw;
+    position: relative;
+}
+
+.bglight {
+    background-color: #F6F7F8;
+    transition-duration: 1s;
+}
+
+.bgdark {
+    background-color: #1E1E1E;
+    transition-duration: 1s;
 }
 
 .content {

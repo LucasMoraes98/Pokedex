@@ -1,0 +1,57 @@
+@media screen and (max-width: 379px) {
+    
+    .exibePUP {
+        top: 1%;
+        line-height: 1;
+    }
+    
+}
+
+@media (min-width: 574px ) {
+    .exibePUP {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+    }
+    
+}
+
+@media (min-width: 819px ) {
+    .exibePUP {
+        width: 80%;
+    }
+    
+}
+
+@media (min-width: 992px ) {
+    
+    #div-popup {
+        
+    }
+    
+    
+        #popupPokemon {
+            max-height: 100%;
+    
+        }
+
+        .exibePUP {
+            position: fixed;
+            max-width: 40%;
+            max-height: 90vh;
+            font-size: 1em;            
+        }
+
+        #card {
+            max-height: 100%;
+        }
+
+        #tabelaCompletaPokemon {
+        
+            line-height: 0.5;
+
+        }
+    
+}

@@ -1,0 +1,200 @@
+#div-popup {
+    z-index: 1;
+    border-radius: 1rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+
+    #popupPokemon {
+        border: #AAA solid 2px;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+
+    }
+
+    .exibePUP {
+        display: flex;
+        width: 92%;
+        vertical-align: middle;
+        padding: 0;
+        justify-content: center;
+        position: fixed;
+        top: 15%;
+    }
+
+    .ocultaPUP {
+        display: none;
+    }
+
+
+        #card {
+            background: rgb(255,255,255);
+            background: linear-gradient(180deg, rgba(255,255,255,0.09933480228028713) 0%, rgba(255,255,255,0.051715754661239455) 4%, rgba(255,255,255,0.14975497034751406) 9%, rgba(255,255,255,1) 22%, rgba(255,255,255,1) 33%, rgba(255,255,255,1) 83%, rgba(205,205,205,0.8500350823923319) 98%);
+            border-radius: 1rem;
+            border: none;
+            padding: 1rem 0;
+        }
+
+
+#card__tabela {
+    border: none;
+}
+
+    #tabelaCompletaPokemon {
+        
+        color: #111111;
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+    }
+
+    #row-photo {
+        line-height: 20px;
+        max-height: 300px;
+    }
+
+    #col-photo {
+        max-height: 100px;
+        width: 100%;
+    }
+
+        #photo-pokemon {
+            height: 150px;
+            max-width: 95%;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
+    #row-namenumber {
+        color: #333;
+    }
+
+        #cel-name {
+            text-align: left;
+            font-weight: 400;
+            font-size: 1.5em;
+            text-transform: capitalize;
+            padding: 0.5rem 0.5rem
+        }
+
+        #cel-num {
+            font-size: 1.25em;
+            padding: 0.5rem 0.5rem;
+            text-align: right;
+        }
+
+    #row_overview {
+        text-align: center;
+        color: #222222;
+        font-style: italic;
+        font-weight: 350;
+    }
+
+    .row-group {
+        width: 100%;
+        margin: 0;
+    }
+
+    #row_types {
+        
+    }
+
+    #col-types{
+        width: 100%;
+    }
+
+    .lista-NoListed {
+        display: flex;
+        list-style: none;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 0 1rem;
+        margin-top: 0;
+    }
+
+    .card__types__li {
+        color: #fff;
+        padding: .5rem 1rem;
+        margin: .25rem 0;
+        font-size: 1rem;
+        border-radius: 1rem;
+        filter: brightness(1.1);
+        text-align: center;
+    }
+    
+    .cel-physical-title {
+        font-weight: 350;
+    }
+
+    .subtabelas {
+        border-radius: 1rem;
+        margin: 0.25rem auto;
+        width: 100%;
+    }
+
+    #table_overview {
+        background-color: transparent;
+    }
+
+    .subtabelas td {
+        padding: 0.25rem;
+    }
+
+    #cel-desc {
+        text-align: left;
+        font-size: 1em;
+        font-style: italic;
+        padding: 0 0.5rem
+    }
+
+    .cel-title {
+        border-radius: 1rem 1rem 0 0;
+        font-size: 1.25em;
+        line-height: 1.25em;
+    }
+
+    #body-stats {
+        text-align: right;
+        font-weight: 350;
+    }
+
+    .cel-stats-val {
+        text-align: left;
+        font-weight: 500;
+    }
+
+    .cel-capitalize {
+        text-transform: capitalize;
+    }
+
+    
+
+
+#card__botoes {
+    display: flex;
+}
+
+    .botao-seta {  
+        color: #FFF; 
+        background-color: transparent;
+        border: none;
+        font-size: 3em;
+        width: 30%;
+    }
+
+    #bttClosePUP {
+        font-size: 2rem;
+        color: #FFFFFF;
+        font-weight: bold;
+        border: none;
+        justify-content: center;
+        margin: 0.25rem auto;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+    }

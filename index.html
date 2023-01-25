@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <link rel="icon" href="./assets/img/favicon-16x16.png">
 
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
+    <link rel="icon" href="./assets/img/favicon-16x16.png">
 
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,28 +16,94 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
     
-    <!-- Nosso CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/global--discovery.css">
+    <link rel="stylesheet" href="/assets/css/popup--pokemon-responsive.css">
+    <link rel="stylesheet" href="/assets/css/popup--pokemon.css">
+
 </head>
 
-<body>
+<body class="lightdark bglight">
+    <header>
     <section class="content">
-        <h1><a href="https://pokedex-mocha-eight.vercel.app/"><img src="/assets/img/Pokédex_logo.png" class="media-object  img-responsive img-thumbnail"></a></h1>
+        <h1 class="cabecalho__titulo"><a href="index.html"><img class="cabecalho__titulo__logo" src="/assets/img/Pokédex_logo.png" alt="Pokédex"></a></h1>
 
             <ol id="pokemonList"class="pokemons">
             </ol>
 
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Carregar mais
+            <div id="modoEscuroClaro">
+                <button id="header__EscuroClaro__icon" onclick="alterarModoEscuroClaro()">
+                    <i class="uil uil-brightness-half"></i>
+                </button>
+            </div>
+    </header>
+
+    <nav class="discovery">
+
+        <div class="discovery__container" id="discovery__option">
+            
+            <button id="discovery__option__icon">
+                <i class="uil uil-bars"></i>
             </button>
+           
         </div>
+
+        <div class="discovery__container oculto animate__animated" id="discovery__plus">
+            
+            <div class="discovery__plus__container" id="discovery__plus__search">
+                <h3>Search by name or number</h3>
+                <form id="discovery__plus__search__form" action="">
+                    <input class="todos-inputs" id="discovery__plus__search__form__input" type="text" name="" >
+                    <button id="discovery__plus__search__form__icon" type="submit"><i class="uil uil-search"></i></button>
+                </form>
+                <div class="ocultaSPN animat animate__animated" id="msgErroSearch">
+                    
+                </div>
+            </div>
+
+            <div class="discovery__plus__container" id="discovery__plus__types">
+                <h3>Procure pelo tipo</h3>
+                <button class="type-button normal" id="normal">normal</button>
+                <button class="type-button fighting" id="fighting">fighting</button>
+                <button class="type-button flying" id="flying">flying</button>
+                <button class="type-button poison" id="poison">poison</button>
+                <button class="type-button ground" id="ground">ground</button>
+                <button class="type-button rock" id="rock">rock</button>
+                <button class="type-button bug" id="bug">bug</button>
+                <button class="type-button ghost" id="ghost">ghost</button>
+                <button class="type-button steel" id="steel">steel</button>
+                <button class="type-button fire" id="fire">fire</button>
+                <button class="type-button water" id="water">water</button>
+                <button class="type-button grass" id="grass">grass</button>
+                <button class="type-button electric" id="electric">electric</button>
+                <button class="type-button psychic" id="psychic">psychic</button>
+                <button class="type-button ice" id="ice">ice</button>
+                <button class="type-button dragon" id="dragon">dragon</button>
+                <button class="type-button dark" id="dark">dark</button>
+                <button class="type-button fairy" id="fairy">fairy</button>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="content lightdark bglight">
+
+    <div id="div-popup" class="exibePUP">
+            <!-- POPUP HERE -->
+    </div>
+
     </section>
 
-    <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js" type="text/javascript"></script>
-    <script src="/assets/js/poke-api.js" type="text/javascript"></script>
-    <script src="/assets/js/main.js" type="text/javascript"></script>
+    <!-- JS --> 
+    <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/discovery.js"></script>
+    <script src="/assets/js/discovery-search.js"></script>
+    <script src="/assets/js/discovery-types.js"></script>
+    <script src="/assets/js/pokemon-card.js"></script>
+    <script src="/assets/js/content-HTML.js"></script>
 </body>
 </html>
