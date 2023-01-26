@@ -70,7 +70,7 @@ pokeApi.getPokemons = (offset = 0, limit = 649)=> {
 
 
 pokeApi.filtraPokemon = (idPokemon)=> {
-    return idPokemon <= 386;
+    return idPokemon <= 649;
 }
 
 
