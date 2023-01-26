@@ -8,7 +8,6 @@ const bttAll = document.getElementById('bttAll')
 
 const maxRecords = 649;
 let offset = 0;
-let limit = 10;
 
 function alterarModoEscuroClaro() {
 
